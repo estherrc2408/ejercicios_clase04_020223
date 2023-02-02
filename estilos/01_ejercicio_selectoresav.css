@@ -1,0 +1,28 @@
+h1 {
+    color:teal
+}
+/*tan solo hay un h1 en el texto de modo */
+p strong {
+    color:red
+}
+p span {
+    color: orange
+}
+h2 {
+    color:blue
+}
+p a{
+    color:red
+}
+p a em{
+    color:blue
+}
+p span[class="especial"]{
+    color:purple
+}
+table caption{
+    color: blue
+}
+thead[scope="col"] thead[class="especial"]{
+    color:orange
+}

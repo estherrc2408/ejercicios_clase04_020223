@@ -1,0 +1,38 @@
+
+    <!DOCTYPE html> 
+    <html lang="es"> 
+    <head> 
+        <meta charset="UTF-8" /> <title>Ejemplo de estilos sin CSS</title> 
+        <style type="text/css"> 
+            body { margin: 0.5in; } /* Cuerpo con margen de media pulgada */ 
+            h1 { line-height: 2cm; } /* h1 con un interlineado de 2 cms */ 
+            p { word-spacing: 4mm; } /* Espacido entre palabras 4 milímetros entre si */
+            a { font-size: 20pt } /* Enlaces con tamaño de letra de 18 puntos */ 
+            span { font-size: 1pc } /* Los <span> con tamaño de letra de 1 pica */ 
+            /*UNIDADES ABSOLUTAS
+        las medidas absolutas tan solo son buen práctica para algo estático que se use en un dispositivo concreto
+        Lo mejor es utilizar unidades relativas.
+
+        in  pulgadas 1in=2.54cm
+        cm
+        mm
+        pt  1pt=0.35mm
+        pc  1pc=4.32mm
+        */
+        /*UNIDADES RELATIVAS*/
+            h2 {font-size: 12px;text-indent: 3em;}
+            
+        
+        </style>
+    </head> 
+    <body> 
+        <section> 
+            <h1>Titulo Principal <br /> Blog de la Clase </h1> 
+            <p>En este párrafo hay un <a href="#">Enlace</a> vacío.</p> 
+            <p>Aquí hay <span> parte del texto </span> diferente.</p> 
+            Texto fuera de P. 
+            <h2>h2 de prueba</h2>
+        </section> 
+    </body> 
+    </html>
+

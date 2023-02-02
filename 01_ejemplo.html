@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+    <html lang="es"> 
+        <head> <meta charset="UTF-8" /> 
+        <title>Ejemplo de estilos selector descendente y el selector de hijos</title> 
+        <style type="text/css"> 
+            p a { color: red; }
+            p > a { color: blue; }
+            /*el selector descendente toma a los elementos que van por debajo de p, toma los hijos directo de p*/
+            h2 { color: green; }
+            /*todo h2 en verde*/
+            h1 + h2 { color: rgb(156, 255, 36) }
+            /*todo h1+h2 (etiquetas h1 y h2 adyacentes) en rgb(156,255,36), cambiara tan solo el segundo valor, solo h2 será de este color*/
+            a[id] { color: pink; }
+            /*[nombre_atributo] aplica el rosa a los elementos con el atributo con este nombre*/
+            a[class="externo"] { color: yellow; }            
+            a[href="http://www.ejemplo.com"] { color: purple ; }
+            /*[nombre_atributo="valor"] aplica el amarillo o morado a los elementos que tienen un atributo de cierto nombre y cierto valor*/
+            a[class~="abajo"] { color: orange; }
+            /*[nombre_atributo~=valor] aplica el naranja a los elementos que tienen establecido un atributo llamado nombre_atributo y al menos uno de los valores del atributo es valor. */
+            /*o sea que si tenemos varios <a> y hay varios atributos, si al menos uno es un atributo class y tiene como valor "abajo", entonces se pondrá naranja*/
+            *[lang=en] { color: brown; }
+            /*cualquier atributo que tenga como atributo lang con valor en : lang=en */
+            *[lang|="es"] { color : rgb(189, 189, 189) }
+            /*[nombre_atributo|=valor] selecciona los elementos que tienen establecido un atributo llamado nombre_atributo y cuyo valor es una serie de palabras SEPARADAS CON GUIONES
+            pero comienza con valor. 
+            Este selector solo es util para los atributos lang, que indican el idioma del contenido del elemento*/
+    </style>  
+
+    </head> 
+    <body> 
+        <section> 
+             <p><span><a href="#">Enlace2</a></span></p>
+             <!--como span es descendente de p, es cambiado por p > a-->
+             <p><a href="#">Enlace1</a></p>
+             <h2>elemento h2</h2>   <!--color verde-->
+             <h1>elemento h1</h1>   <!--color negro por defecto-->
+             <h2>elemento h2</h2>   <!--color rgb(156,255,36)-->
+
+            <a id="interno" href="#">Enlace Interno</a> <br /> 
+            <a class="externo" href="#">Enlace Externo</a> <br /> 
+            <a class="arriba abajo" href="#">Enlace Arriba/Abajo</a> <br /> 
+            <a href="http://www.ejemplo.com">Enlace Ejemplo</a> <br /> 
+            <a lang="en" href="#">Enlace Inglés</a> <br /> 
+            <a lang="es-ar" href="#">Enlace Español</a> <br />
+            <a id="enlacewhatever" href="#">whatever</a>
+
+        </section> 
+    </body> 
+    </html>
